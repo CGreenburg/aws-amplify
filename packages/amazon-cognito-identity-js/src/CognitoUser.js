@@ -954,6 +954,7 @@ export default class CognitoUser {
       if (err) {
         return callback(err, null);
       }
+      this.signInUserSession = null;
       this.clearCachedTokens();
       return callback(null, 'SUCCESS');
     });
